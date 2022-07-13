@@ -7,6 +7,9 @@ RUN apt update && apt install -y \
 
 ADD *.sh /
 
-RUN ["chmod", "+x", "/entrypoint.sh"]
+RUN ["sh", "init.sh"]
 
+RUN ["kotlin", "-version"]
+
+RUN ["chmod", "+x", "/entrypoint.sh"]
 ENTRYPOINT ["/entrypoint.sh"]
