@@ -28,3 +28,5 @@ ls /usr/local/kotlinc/bin/* \
   | xargs -I {} ln -sf {} /usr/local/bin
 
 kotlin -version
+
+rm -f "$0"
