@@ -1,0 +1,19 @@
+
+name: 'Kotlin Action'
+
+description: 'Action for Kotlin.'
+
+branding:
+  icon: 'loader'
+  color: 'orange'
+
+inputs:
+  command:
+    description: 'kotlin command.'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.command }}

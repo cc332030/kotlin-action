@@ -1,0 +1,18 @@
+
+name: kotlin
+
+on:
+  push:
+    branches:
+      - "*"
+    tags-ignore:
+      - "*"
+  pull_request:
+    branches:
+      - "*"
+
+jobs:
+  kotlin:
+    uses: cc332030/kotlin-action/.github/workflows/kotlin.yml@master
+    with:
+      command: kotlinc -script kotlin.kts

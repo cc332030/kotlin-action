@@ -1,0 +1,19 @@
+
+name: kotlin
+
+on:
+  workflow_call:
+    inputs:
+      command:
+        required: true
+        type: string
+
+jobs:
+  kotlin:
+    name: kotlin
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: cc332030/kotlin-action@main
+        with:
+          command: ${{ inputs.command }}
