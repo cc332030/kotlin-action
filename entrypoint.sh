@@ -20,12 +20,12 @@ browserDownloadUrl=${browserDownloadUrl%\"*}
 
 echo "browserDownloadUrl: $browserDownloadUrl"
 
-curl -L \
+curl -sL \
     "$browserDownloadUrl" \
     -o kotlin-compiler.zip
 
 # -o 覆盖已有文件，-q 静默
-unzip -oq kotlin-compiler-1.7.10.zip -d /usr/local
+unzip -oq kotlin-compiler.zip -d /usr/local
 
 # shellcheck disable=SC2010
 ls /usr/local/kotlinc/bin/* \
