@@ -9,7 +9,5 @@ ADD *.sh /
 
 RUN ["sh", "init.sh"]
 
-RUN ["kotlin", "-version"]
-
 RUN ["chmod", "+x", "/entrypoint.sh"]
 ENTRYPOINT ["/entrypoint.sh"]
