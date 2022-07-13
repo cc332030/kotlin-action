@@ -1,4 +1,4 @@
-FROM ibm-semeru-runtimes:open-17-jdk-focal
+FROM ibm-semeru-runtimes:open-17-jdk
 
 RUN apt update && apt install -y \
     openssh-client gnupg gnupg2 \
