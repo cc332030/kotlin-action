@@ -2,20 +2,15 @@
 
 set -e
 
-browserDownloadUrl=$(curl -s https://api.github.com/repos/JetBrains/kotlin/releases/latest |
+downUrl=$(curl -s https://api.github.com/repos/JetBrains/kotlin/releases/latest |
   grep browser_download_url |
-  grep compiler)
+  grep compiler |
+  cut -d \" -f 4)
 
-# 截取 `: "` 右边的字符串
-browserDownloadUrl=${browserDownloadUrl#*: \"}
-
-# 截取 `"` 左边的字符串
-browserDownloadUrl=${browserDownloadUrl%\"*}
-
-echo "browserDownloadUrl: $browserDownloadUrl"
+echo "downUrl: $downUrl"
 
 curl -sL \
-  "$browserDownloadUrl" \
+  "$downUrl" \
   -o kotlin-compiler.zip
 
 # -o 覆盖已有文件，-q 静默
