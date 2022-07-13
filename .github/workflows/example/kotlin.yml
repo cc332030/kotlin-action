@@ -13,6 +13,6 @@ on:
 
 jobs:
   kotlin:
-    uses: cc332030/kotlin-action/.github/workflows/kotlin.yml@master
+    uses: cc332030/kotlin-action/.github/workflows/kotlin.yml@main
     with:
       command: kotlinc -script kotlin.kts
