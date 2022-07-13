@@ -2,7 +2,8 @@ FROM ibm-semeru-runtimes:open-17-jdk
 
 RUN apt update && apt install -y \
     openssh-client gnupg gnupg2 \
-    curl
+    curl \
+    unzip
 
 ADD *.sh /
 

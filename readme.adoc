@@ -1,4 +1,4 @@
 
 = kotlin-action
 
-see `.github/workflows/example`
+see `.github/workflows/kotlin-example.yml`
