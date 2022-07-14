@@ -28,5 +28,3 @@ for f in /usr/local/kotlinc/bin/*; do
 done
 
 kotlin -version
-
-rm -f "$0"
