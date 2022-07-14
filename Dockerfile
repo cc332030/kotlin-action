@@ -5,7 +5,8 @@ RUN apt update && apt install -y \
     curl \
     unzip
 
-RUN C_GITHUB_URL=https://github.com/cc332030
+ENV C_GITHUB_URL=https://github.com/cc332030
+
 RUN curl -sL $C_GITHUB_URL/kotlin/raw/main/script/init-kotlin/init-kotlin.sh | sh
 
 ADD *.sh /
