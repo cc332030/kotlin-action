@@ -5,9 +5,10 @@ RUN apt update && apt install -y \
     curl \
     unzip
 
-ADD *.sh /
+RUN C_GITHUB_URL=https://github.com/cc332030
+RUN curl -sL $C_GITHUB_URL/kotlin/raw/main/script/init-kotlin/init-kotlin.sh | sh
 
-RUN ["sh", "init.sh"]
+ADD *.sh /
 
 RUN ["chmod", "+x", "/entrypoint.sh"]
 ENTRYPOINT ["/entrypoint.sh"]
